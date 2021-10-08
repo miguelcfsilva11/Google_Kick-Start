@@ -18,10 +18,12 @@ def cut(intervals, c):
     heapq.heapify(heap)
 
     counter = len(intervals)
+
     while len(heap) > 0 and c > 0:
         intervals = heapq.heappop(heap)
         counter -= intervals
         c -= 1
+        
     return counter
             
 

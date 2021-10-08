@@ -53,15 +53,15 @@ while t > 0:
     col = 0
     while len(grid) < 3:
 
-        el = list(map(int, input().split()))
+        row = list(map(int, input().split()))
 
-        if len(el) == 2:
-            last_el = el[-1]
-            el.pop()
-            el.append(1)
-            el.append(last_el)
+        if len(row) == 2:
+            last_el = row[-1]
+            row.pop()
+            row.append(1)
+            row.append(last_el)
         
-        grid.append(el)
+        grid.append(row)
     t -= 1
     counter += 1
     print('Case #{0}: '.format(counter - 1) + str(arithmetic(grid)))
